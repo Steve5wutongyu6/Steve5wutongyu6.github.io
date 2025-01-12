@@ -48,55 +48,264 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .privacy-policy {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .privacy-policy h2 {
+            color: #2c3e50;
+        }
+        .privacy-policy ul {
+            list-style-type: disc;
+            margin-bottom: 15px;
+        }
+        .privacy-policy ul li {
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .update-date {
+            text-align: right;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .language-switcher button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>BetterReadingList</h1>
-        <p>一个更强大的Chrome阅读列表</p>
-        <p>厌倦了简易的Chrome阅读列表？试试这个！无缝对接Chrome原生阅读列表，在原生阅读列表基础上增加了搜索功能和两种不同的排序方式。让你更快速地在阅读列表中找到你收藏的文章！</p>
+        <!-- 语言切换按钮 -->
+        <div class="language-switcher">
+            <button onclick="switchLanguage('zh')">中文</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
 
-        <h2>功能</h2>
-        <ul>
-            <li>
-                <strong>搜索</strong>
+        <!-- 中文内容 -->
+        <div id="zh-content">
+            <h1>BetterReadingList</h1>
+            <p>一个更强大的Chrome阅读列表</p>
+            <p>厌倦了简易的Chrome阅读列表？试试这个！无缝对接Chrome原生阅读列表，在原生阅读列表基础上增加了搜索功能和两种不同的排序方式。让你更快速地在阅读列表中找到你收藏的文章！</p>
+
+            <h2>功能</h2>
+            <ul>
+                <li>
+                    <strong>搜索</strong>
+                    <ul>
+                        <li>支持标题和网址的模糊搜索</li>
+                        <li>实时搜索结果展示</li>
+                        <li>支持按标签筛选</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>排序</strong>
+                    <ul>
+                        <li>按创建时间排序</li>
+                        <li>按更新时间排序</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>安装</h2>
+            <ol>
+                <li>从Chrome网上应用店安装</li>
+                <li>从Microsoft Edge网上应用店安装</li>
+                <li>从GitHub下载源码安装</li>
+            </ol>
+
+            <h2>使用说明</h2>
+            <ol>
+                <li>点击Chrome工具栏中的扩展图标即可打开</li>
+                <li>点击添加当前标签页，将当前标签页添加到阅读列表</li>
+                <li>在阅读列表中管理您的阅读列表</li>
+            </ol>
+
+            <h2>截图</h2>
+            <img src="https://i.imgur.com/DHqJtHH.png" alt="BetterReadingList 截图" loading="lazy" width="1920" height="1080">
+
+            <h2>贡献</h2>
+            <p>欢迎提交Issue和Pull Request，欢迎Star</p>
+
+            <h2>许可证</h2>
+            <p>MIT License</p>
+
+            <!-- 隐私政策部分 -->
+            <div class="privacy-policy">
+                <h2>隐私政策</h2>
+                <p>BetterReadingList 非常重视您的隐私。本隐私政策说明了我们如何收集、使用和保护您的信息。</p>
+
+                <h3>信息收集</h3>
+                <p>本扩展程序：</p>
                 <ul>
-                    <li>支持标题和网址的模糊搜索</li>
-                    <li>实时搜索结果展示</li>
-                    <li>支持按标签筛选</li>
+                    <li>不收集任何个人身份信息</li>
+                    <li>不追踪您的浏览历史</li>
+                    <li>不存储您的个人数据</li>
+                    <li>仅访问您添加到阅读列表中的网页URL和标题信息</li>
+                    <li>所有数据均存储在您的本地浏览器中</li>
                 </ul>
-            </li>
-            <li>
-                <strong>排序</strong>
+
+                <h3>权限说明</h3>
+                <p>本扩展程序请求以下权限：</p>
                 <ul>
-                    <li>按创建时间排序</li>
-                    <li>按更新时间排序</li>
+                    <li><strong>readingList</strong>: 用于访问和管理Chrome的阅读列表</li>
+                    <li><strong>sidePanel</strong>: 用于在侧边栏中显示阅读列表</li>
+                    <li><strong>contextMenus</strong>: 用于添加右键菜单选项</li>
+                    <li><strong>tabs</strong>: 用于获取当前标签页信息</li>
                 </ul>
-            </li>
-        </ul>
+                <p>这些权限仅用于实现扩展程序的基本功能，不会用于其他目的。</p>
 
-        <h2>安装</h2>
-        <ol>
-            <li>从Chrome网上应用店安装</li>
-            <li>从Microsoft Edge网上应用店安装</li>
-            <li>从GitHub下载源码安装</li>
-        </ol>
+                <h3>数据存储</h3>
+                <ul>
+                    <li>所有数据均存储在您的本地浏览器中</li>
+                    <li>不会将任何数据上传到外部服务器</li>
+                    <li>您可以随时通过Chrome的设置删除所有数据</li>
+                </ul>
 
-        <h2>使用说明</h2>
-        <ol>
-            <li>点击Chrome工具栏中的扩展图标即可打开</li>
-            <li>点击添加当前标签页，将当前标签页添加到阅读列表</li>
-            <li>在阅读列表中管理您的阅读列表</li>
-        </ol>
+                <h3>更新</h3>
+                <p>我们保留更新本隐私政策的权利。如有重大变更，我们会通过扩展程序更新时通知您。</p>
 
-        <h2>截图</h2>
-        <img src="https://i.imgur.com/DHqJtHH.png" alt="BetterReadingList 截图" loading="lazy" width="1920" height="1080">
+                <div class="contact-info">
+                    <h3>联系我们</h3>
+                    <p>如果您对本隐私政策有任何疑问，请通过<a href="https://github.com/Steve5wutongyu6/BetterReadingList/issues" target="_blank">GitHub提交Issue</a>与我们联系。</p>
+                </div>
 
-        <h2>贡献</h2>
-        <p>欢迎提交Issue和Pull Request，欢迎Star</p>
+                <div class="update-date">
+                    <p>最后更新日期：2025年1月10日</p>
+                </div>
+            </div>
+        </div>
 
-        <h2>许可证</h2>
-        <p>MIT License</p>
+        <!-- 英文内容 -->
+        <div id="en-content" style="display: none;">
+            <h1>BetterReadingList</h1>
+            <p>A more powerful Chrome reading list</p>
+            <p>Tired of the simple Chrome reading list? Try this one! Seamlessly integrated with Chrome's native reading list, it adds search functionality and two different sorting methods. Find your saved articles faster!</p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>
+                    <strong>Search</strong>
+                    <ul>
+                        <li>Fuzzy search for titles and URLs</li>
+                        <li>Real-time search results</li>
+                        <li>Filter by tags</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sorting</strong>
+                    <ul>
+                        <li>Sort by creation time</li>
+                        <li>Sort by update time</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Installation</h2>
+            <ol>
+                <li>Install from Chrome Web Store</li>
+                <li>Install from Microsoft Edge Add-ons Store</li>
+                <li>Download and install from GitHub</li>
+            </ol>
+
+            <h2>Usage</h2>
+            <ol>
+                <li>Click the extension icon in the Chrome toolbar to open</li>
+                <li>Click "Add Current Tab" to add the current tab to the reading list</li>
+                <li>Manage your reading list in the extension</li>
+            </ol>
+
+            <h2>Screenshots</h2>
+            <img src="https://i.imgur.com/DHqJtHH.png" alt="BetterReadingList Screenshot" loading="lazy" width="1920" height="1080">
+
+            <h2>Contribution</h2>
+            <p>Welcome to submit Issues and Pull Requests. Stars are appreciated!</p>
+
+            <h2>License</h2>
+            <p>MIT License</p>
+
+            <!-- Privacy Policy Section -->
+            <div class="privacy-policy">
+                <h2>Privacy Policy</h2>
+                <p>BetterReadingList values your privacy. This privacy policy explains how we collect, use, and protect your information.</p>
+
+                <h3>Information Collection</h3>
+                <p>This extension:</p>
+                <ul>
+                    <li>Does not collect any personally identifiable information</li>
+                    <li>Does not track your browsing history</li>
+                    <li>Does not store your personal data</li>
+                    <li>Only accesses the URLs and titles of pages you add to the reading list</li>
+                    <li>All data is stored locally in your browser</li>
+                </ul>
+
+                <h3>Permissions</h3>
+                <p>This extension requests the following permissions:</p>
+                <ul>
+                    <li><strong>readingList</strong>: To access and manage Chrome's reading list</li>
+                    <li><strong>sidePanel</strong>: To display the reading list in the sidebar</li>
+                    <li><strong>contextMenus</strong>: To add right-click menu options</li>
+                    <li><strong>tabs</strong>: To get information about the current tab</li>
+                </ul>
+                <p>These permissions are only used for the basic functionality of the extension and will not be used for any other purposes.</p>
+
+                <h3>Data Storage</h3>
+                <ul>
+                    <li>All data is stored locally in your browser</li>
+                    <li>No data is uploaded to external servers</li>
+                    <li>You can delete all data at any time through Chrome's settings</li>
+                </ul>
+
+                <h3>Updates</h3>
+                <p>We reserve the right to update this privacy policy. If there are significant changes, we will notify you through the extension update.</p>
+
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about this privacy policy, please contact us by <a href="https://github.com/Steve5wutongyu6/BetterReadingList/issues" target="_blank">submitting an Issue on GitHub</a>.</p>
+                </div>
+
+                <div class="update-date">
+                    <p>Last updated: January 10, 2025</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // 语言切换函数
+        function switchLanguage(lang) {
+            if (lang === 'zh') {
+                document.getElementById('zh-content').style.display = 'block';
+                document.getElementById('en-content').style.display = 'none';
+            } else if (lang === 'en') {
+                document.getElementById('zh-content').style.display = 'none';
+                document.getElementById('en-content').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
